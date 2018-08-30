@@ -1,0 +1,369 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin:0px;
+}
+/***Abstrações***/
+body{
+    font-family: 'Lucida Bright';
+    font-size: 18px;
+    width: 100%;
+}
+
+main{
+    margin-left: 17%;
+}
+
+footer{
+    margin-left: 17%;
+    padding:0.3em;  
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    margin:10px;
+    cursor: pointer;
+}
+
+ul{
+    list-style-type:none;
+}
+
+textarea{
+    max-width: 50%;
+    max-height: 50%;
+}
+.view-port-width{
+    text-align: center;
+    width: 80vw;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+.caixa{
+    border:1px solid black;
+}
+.secao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lermais{
+    text-decoration: underline;
+    color:blue;
+}
+
+/**Barra lateral*/
+.opcao {
+    margin:0em 0.7em;
+    border-top:2px solid black;
+}
+
+.desabilitado a{
+    color:grey;
+    cursor:default;
+}
+
+.oculto{
+    display: none;
+}
+
+/*Habilidades*/ 
+.hab{
+    display: flex;
+    flex-direction: column;
+    padding:1em 1em;
+    width: 50%;  
+}
+
+.hab h3{
+    text-align:center;
+    margin-bottom: 1em;
+}
+.habilidade{
+    display: flex;
+    flex-direction: row;
+    padding:0.5em 0em;
+}
+
+.habilidade h4{
+    text-align: center;
+    width: 50%;
+}
+/**Niveis*/
+.niveis{
+    display: flex;
+    flex-direction: row;
+}
+
+.nivel{
+    border-radius: 30px;
+    width: 3em;
+    height: 3em;
+    margin-left: 0.4em;
+}
+
+.cheio{
+    background-color: black;
+}
+
+/**Projeto**/
+.projeto{
+    width:30%;
+    margin:0em 1em 1em 1em;
+    text-align: center;
+    padding:1em;
+}
+/**Formação profissional**/
+.curso{
+    width: 25%;
+    margin: 0em 1em 1em 1em;
+    text-align: center;
+}
+
+/***Especificos***/
+/**Barra Lateral**/
+#barra-lateral{
+    /* background-color:#f5b467; */
+    float:left;
+    position: fixed;
+    width:17%;
+    height:100vh;
+    text-align: center;
+}
+
+#barra-lateral-informacoes img{
+    padding-top:1em;
+}
+
+#barra-lateral-informacoes div{
+    padding:1em 0em;
+}
+
+#barra-lateral-opcoes{
+    margin-bottom: 0.7em;
+}
+
+#barra-lateral-opcoes a{
+    transition-duration: 0.2s;
+}
+
+#barra-lateral-opcoes a:hover{
+    background-color: silver;
+}
+
+#barra-lateral-opcoes a:active{
+    background-color: darkgray;
+}
+#botao-barra-lateral{
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    float:left;
+    display:none;
+}
+#botao-barra-lateral-img{
+    width: 100%;
+    background: url("Resources/list.png"); 
+}
+
+/**Principal**/
+    /*Banner*/
+    #banner{
+        background: url("Resources/IMG-20180126.jpg");
+        background-size: cover;
+        max-width: 1366px;
+        height:30em;
+        display: flex;
+        color:#1d1610;
+    }
+    /**Seção 1 Sobre mim**/
+    #sobre-mim{
+        text-align: center;
+        padding: 0em 2em 1em 2em;
+    }
+
+    #sobre-mim p{
+        margin: 0em 1em 1em 1em;
+    }
+   
+    /**Seção 3 Projetos**/
+    #projetos{
+        padding:0em .6em .6em .6em;
+    }
+
+    #projetos img{
+        margin: 1em 0em;
+    }
+
+    #projetos p{
+        margin:1em 0em;
+    }
+
+    /**Seção 4 Formação profissional**/
+    #formacao ul{
+        padding: 1em;
+        margin: 1em 0em -0.1em -0.1em;
+    }
+    #formacao ul h4{
+        margin-bottom:1em;
+    }
+    /**Reponsividade**/
+@media screen and (max-width:1130px){
+    .habilidade{
+        flex-direction: column;
+        padding: 0.5em 2.5em;
+    }
+
+    .habilidade h4{
+        margin-bottom:0.5em;
+        display: block;
+        width: 100%;
+    }
+
+    #projetos section:nth-child(3){
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:900px){
+    #banner{
+        height: 20em;
+    }
+
+    #banner p{
+        display: none;
+    }
+    .projeto{
+        width: 45%;
+        margin: 0em 0em 0.8em 1em;
+    }
+    .curso{
+        width: 40%;
+    }
+
+    #formacao .curso:nth-child(4){
+        display:none;
+    }
+    
+}
+
+@media screen and (max-width:830px){
+    .opcao{
+        margin: 0.7em 0em;
+    }
+
+    #barra-lateral-texto p{
+        margin-bottom: 0.2em;
+    }
+
+    .hab{
+        padding: 0.5em;
+    }
+
+    #projetos{
+        padding:0em;
+    }
+
+    .projeto{
+        margin: 0em 0.5em 0.8em 0.8em;
+    }
+    
+}
+
+@media screen and (max-width:800px){
+    main{
+        margin-left: 0%;
+    }
+
+    footer{
+        margin-left: 0%;
+    }
+
+    #barra-lateral{
+        width: 30%;
+        transform: translateX(-250px);
+        background-color: white;
+        transition-duration:1s; 
+    }
+
+    #botao-barra-lateral{
+        display: flex;
+        transition-duration:1s; 
+    }
+
+    #barra-lateral.mostra{
+        transform: translateX(0px);
+    }
+
+    #botao-barra-lateral.mostra{
+        margin-left: 31%;
+    }
+}
+@media screen and (max-width:700px){
+    #banner{
+        height: 16em;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width:600px){
+    body{
+        font-size: 13px;
+    }
+
+    #banner{
+        height: 10em;
+    }
+}
+
+@media screen and (max-width:500px){
+    #barra-lateral-texto p{
+        margin-bottom: 0.1em;
+    }
+
+    #barra-lateral{
+        width: 40%;
+    }
+
+    #botao-barra-lateral.mostra{
+        margin-left: 41%;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    #barra-lateral{
+        width: 50%;
+    }
+
+    #botao-barra-lateral.mostra{
+        margin-left: 51%;
+    }
+
+    .projeto{
+        display:block;
+        width: 100%;
+    }
+
+    .curso{
+        display:block;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:300px){
+    #banner{
+        height: 8em;
+    }
+
+    body{
+        font-size: 11px;
+    }
+    
+}
